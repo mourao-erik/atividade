@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Livros</h1>
+    
+    <div class="container clearfix">
+        <div class="form-container">
+            <h2>Cadastrar Novo Livro</h2>
+            
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dataLancamento">Data de Lançamento:</label>
+                <input type="text" id="dataLancamento" placeholder="DD/MM/AAAA" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" required >
+            </div>
+            
+            <button onclick="cadastrarLivro()">Cadastrar Livro</button>
+            <p id="mensagem"></p>
+        </div>
+        
+        <div class="search-box">
+            <h2>Buscar Livros</h2>
+            
+            <div class="form-group">
+                <input type="text" id="tituloInput" placeholder="Buscar por título" onclick="buscarPorTitulo()">
+                <button onclick="buscarPorTitulo()">Buscar</button>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="autorInput" placeholder="Buscar por autor" onclick="buscarPorAutor()">
+                <button onclick="buscarPorAutor()">Buscar</button>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="isbnInput" placeholder="Buscar por ISBN" onclick="buscarPorIsbn()">
+                <button onclick="buscarPorIsbn()">Buscar</button>
+            </div>
+            
+            <div class="form-group">
+                <button onclick="listarTodos()">Listar Todos</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="resultado">
+        
+    </div>
+    
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
